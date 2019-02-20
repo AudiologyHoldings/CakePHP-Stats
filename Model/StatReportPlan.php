@@ -96,8 +96,8 @@ class StatReportPlan extends StatsAppModel {
 		parent::__construct($id, $table, $ds);
 		$this->validate = array(
 			'name' => array(
-				'notEmpty' => array(
-					'rule' => array('notEmpty'),
+				'notBlank' => array(
+					'rule' => array('notBlank'),
 					'required' => 'create',
 					'allowEmpty' => false,
 					'message' => __('Please enter a Name', true)
@@ -206,7 +206,7 @@ class StatReportPlan extends StatsAppModel {
 			$data['StatReportPlan']['id'] = $id;
 			$tmp = $this->validate;
 			$this->validate = array(
-				'id' => array('rule' => 'notEmpty'),
+				'id' => array('rule' => 'notBlank'),
 				'confirm' => array('rule' => '[1]'));
 			$this->set($data);
 			if ($this->validates()) {

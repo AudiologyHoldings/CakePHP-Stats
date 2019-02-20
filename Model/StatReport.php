@@ -84,8 +84,8 @@ class StatReport extends StatsAppModel {
 		$this->validate = array(
 			/* we will allow one-off reports
 			'stat_report_plan_id' => array(
-				'notEmpty' => array(
-					'rule' => array('notEmpty'),
+				'notBlank' => array(
+					'rule' => array('notBlank'),
 					'required' => 'create',
 					'allowEmpty' => false,
 					'message' => __('Please enter a Stat Report Plan', true)
