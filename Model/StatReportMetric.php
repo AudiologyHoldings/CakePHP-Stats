@@ -98,8 +98,8 @@ class StatReportMetric extends StatsAppModel {
 		parent::__construct($id, $table, $ds);
 		$this->validate = array(
 			'name' => array(
-				'notEmpty' => array(
-					'rule' => array('notEmpty'),
+				'notBlank' => array(
+					'rule' => array('notBlank'),
 					'required' => 'create',
 					'allowEmpty' => false,
 					'message' => __('Please enter a Name', true)
@@ -112,8 +112,8 @@ class StatReportMetric extends StatsAppModel {
 				)
 			),
 			'abbr' => array(
-				'notEmpty' => array(
-					'rule' => array('notEmpty'),
+				'notBlank' => array(
+					'rule' => array('notBlank'),
 					'required' => 'create',
 					'allowEmpty' => false,
 					'message' => __('Please enter a Abbr', true)
